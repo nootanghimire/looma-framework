@@ -13,15 +13,15 @@ Why use this?
 
 There are lot of good framework to understand and use. You can stick to them. They are cool.
 
-But if you want to know how things are in the beginning, you can use this. I've commented almost everything so that it'll be easier to learn (about routing and request response things)
+***But if you want to know how things are in the beginning, you can use this. I've commented almost everything so that it'll be easier to learn (about routing and request response things)***
+
+####Start off with index.php and go on following the comments :)
 
 
 Hey, Wait! You can extend this!
 -----------------
 
 You can extend this to make just another cool framework. But be sure to include my name somewhere, huh? 
-
-And I don't need donations. Feeding me would suffice ;)
 
 
 Important Thingo -- License
