@@ -40,6 +40,10 @@ Class Database {
 		return true;
 	}
 
+	public function getConnection(){
+		return $this->connection;
+	}
+	
 	private function connectDB(){
 		if($this->connection) mysqli_close($this->connection);
 		$this->connection = mysqli_connect($this->db_host, $this->db_user, $this->db_pass, $this->db_name);
@@ -91,7 +95,7 @@ Class Database {
 	}
 	
 	public function prepared_exec_and_fetch($query, $bind_param, $value_array){
-		if(is_array($value_array) {
+		if(is_array($value_array)) {
 			array_unshift($value_array, $bind_param);
 		} else {
 			return false;

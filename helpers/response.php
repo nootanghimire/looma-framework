@@ -14,12 +14,17 @@ Class Response{
 	/*********************************************************
 	 * function init: It initializes things. See the function
 	 */
-	public function init($className, $methodName="construct", $args=null){ 
+	public function init($className, $methodName="index", $args=null){ 
 		#echo "Response Called: " . $className . " -- Method: ". $methodName . " -- Args: ";
 		#var_dump($args);
 		$this->classContainer = new $className(); //As i said earlier, $classname is thing1 and that is being instantiated 
+		//call_user_func_array(array($obj, $method_name), $params);
+		if($args!==null) {
+			$this->view(call_user_func_array(array($this->classContainer, $methodName),$args)); 
+		} else {
+			$this->view($this->classContainer->$methodName($args));
+		}
 
-		$this->view($this->classContainer->$methodName($args)); 
 
 		// ^ Calling specific methods of specific class (which were sent by routes.php)
 		// and passing the returned value to 'view' method 

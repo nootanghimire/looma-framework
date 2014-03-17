@@ -17,6 +17,10 @@ spl_autoload_register(function($class){
 
 		include "app/".strtolower($class).".php";
 
+	}  elseif (file_exists("helpers/dbabst/".strtolower($class).".php")) {
+
+		include "helpers/dbabst/".strtolower($class).".php";
+
 	} else {
 
 		die("Could not Load Class: ". $class);
@@ -37,10 +41,7 @@ define('ROOT', dirname(__FILE__));  //This just defines the constant ROOT to con
 /* including wierd configs */
 
 include "helpers/config.php";  //includes config.php file from folder helpers. See config.php to know what it has!
-
-
 /** The magic! **/
-
 $route = new Route($_GET['url']); //It calls the constructer of the route class.
 
 /* Note: We defined "class route" in helpers/route.php.. That spl_autoload_register() does all the work of loading that file */

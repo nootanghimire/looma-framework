@@ -1,6 +1,5 @@
 <html>
 <head>
-	<title>@nootanghimire | #cipher</title>
+	<title>Looma</title>
 </head>
 <body>
-

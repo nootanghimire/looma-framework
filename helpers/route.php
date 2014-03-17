@@ -31,7 +31,7 @@ Class Route {
 	 */
 	private function route(){
 
-		global $route;   
+		global $route;
 		//global declaration. $route is a variable declared in config.php
 		//Even though we included config.php in this file (index.php) that var is not available for us to use yet
 		//Writing this simple expression let us do so.
