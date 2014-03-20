@@ -1,0 +1,49 @@
+html,body{
+	margin:0px;
+}
+body{
+	font-family: "Open Sans", Arial, sans-serif;
+	font-size: 15px;
+	overflow-x: hidden;
+}
+input,select{
+	font-family: inherit;
+	font-size: 14px;
+}
+header{
+	padding: 10px;
+	font-size: 25px;
+}
+footer,container{
+	padding: 10px;
+}
+container{
+	
+}
+footer{
+	position: fixed;
+	bottom: 0px;
+	height: 18px;
+	line-height: 18px;
+	border-top: 1px solid #eee;
+	width: 100%;
+	background: #6ad;
+	color: #eee;
+}
+select{
+	border: 1px solid #aaa;
+	border-radius: 0px;
+	outline: none;
+	padding: 2.5px;
+}
+select:hover{
+	border: 1px solid #888;
+}
+select:focus{
+	border: 1px solid #888;
+	box-shadow: inset 1px 1px 1px rgba(0,0,0,0.2);
+}
+.title{
+	text-decoration: none;
+	color: #000;
+}

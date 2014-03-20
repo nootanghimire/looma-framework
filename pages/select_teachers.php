@@ -2,7 +2,7 @@ Select Teachers
 <?php 
 	  //print_r($teachers_list);
 	echo "<select name='teacher-select' id='teacher-select' onchange='change_teacher()'>";
-	echo "<option value='--'>Click to Selet a Teacher!</option>";
+	echo "<option value='--'>Click to Select a Teacher!</option>";
 	foreach ($teachers_list as $teacher) {
 		echo "<option value=\"".$teacher['TeacherID']."\">".$teacher['TeacherFullName']."</option>";
 	}	   
