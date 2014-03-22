@@ -30,18 +30,36 @@ footer{
 	background: #6ad;
 	color: #eee;
 }
-select{
+.selectbox{
+	display: inline-table;
+	width: 150px;
 	border: 1px solid #aaa;
-	border-radius: 0px;
+	border-radius: 3px;
 	outline: none;
-	padding: 2.5px;
+	margin: 10px;
+	margin-top: 0px;
+	list-style: none;
+	cursor: pointer;
 }
-select:hover{
-	border: 1px solid #888;
+.selectbox li{
+	margin-left: -40px;
+	padding: 5px 0px;
 }
-select:focus{
-	border: 1px solid #888;
-	box-shadow: inset 1px 1px 1px rgba(0,0,0,0.2);
+.selectbox ul{
+	display: none;
+	list-style: none;
+	margin-left: -40px;
+}
+.selectbox ul li{
+	margin-left: -40px;
+	padding: 5px 10px;
+}
+.selectbox ul li:hover{
+	background: #6ad;
+	color: #fff;
+}
+.selectedbox{
+	box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
 }
 .title{
 	text-decoration: none;

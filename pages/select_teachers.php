@@ -1,20 +1,15 @@
 Select Teachers
+<ul class="selectbox">
 <?php 
 	  //print_r($teachers_list);
-	echo "<select name='teacher-select' id='teacher-select' onchange='change_teacher()'>";
-	echo "<option value='--'>Click to Select a Teacher!</option>";
+	//echo "<select name='teacher-select' id='teacher-select' onchange='change_teacher()'>";
+	echo "<li class='disp'>&nbsp;&nbsp;&nbsp;Click to Select a Teacher!</li>";
+	echo "<ul>";
 	foreach ($teachers_list as $teacher) {
-		echo "<option value=\"".$teacher['TeacherID']."\">".$teacher['TeacherFullName']."</option>";
+		echo "<li value=\"".$teacher['TeacherID']."\">".$teacher['TeacherFullName']."</li>";
 	}	   
-	echo "</select>"
+	echo "</ul>"
 
 ?>
+</ul>
 <br>
-<script type="text/javascript">
-function change_teacher(){
-	var current_selected = document.getElementById('teacher-select').value;
-	var url = "/teachers/start_teaching/"+current_selected;
-	window.location.href = url;
-	//window.location.href = 
-}
-</script>
