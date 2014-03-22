@@ -47,7 +47,6 @@ select:focus{
 	text-decoration: none;
 	color: #000;
 }
-
 .toolbar button{
 	margin-top: -10.5px;
 	width: 39px;
@@ -58,7 +57,7 @@ select:focus{
 	background: none;
 }
 .toolbar button:hover{
-	box-shadow: inset 0px 4px 0px -2px rgba(0,0,0,0.3);
+	box-shadow: inset 0px 5px 0px -2px rgba(0,0,0,0.3);
 }
 .toolbar button.selected{
 	background: #07b;
@@ -67,4 +66,12 @@ select:focus{
 	margin: -4px;
 	width: 35px;
 	height: 35px;
+}
+.toolbar span{
+	position: absolute;
+	top:-30px;
+	display: none;
+	color: #fff;
+	background: rgba(0,0,0,0.9);
+	padding: 2px 4px;
 }
