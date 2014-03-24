@@ -5,6 +5,7 @@ $(function(){
 		switch($(this).index()){
 			case 1:
 			window.location.href = "/"
+			$("body").css("cursor","progress");
 			break;
 		}
 	})
@@ -16,13 +17,20 @@ $(function(){
 	})
 	$(".selectbox").click(function(e){
 		$(".selectbox .disp").toggle();
-		$(".selectbox ul").toggle();
+		$(".selectbox ul").fadeToggle(150);
 		$(".selectbox").toggleClass('selectedbox')
 	})
-	$(".selectbox ul li").click(function(){
+	$(".teacher-list ul li").click(function(){
 		var current_selected = $(this).attr('value');
 		var url = "/teachers/start_teaching/"+current_selected;
 		window.location.href = url;
+		$("body").css("cursor","progress");
+	})
+	$(".class-list ul li").click(function(){
+		var current_selected = $(this).attr('value');
+		var url = "/contents/in/"+current_selected;
+		window.location.href = url;
+		$("body").css("cursor","progress");
 	})
 	$(document).mouseup(function (e){
 		var container = $(".selectbox");

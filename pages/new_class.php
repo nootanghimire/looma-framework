@@ -1,24 +1,20 @@
 <br>
 Select Level.
-
-<select name="levelSelect" id="levelSelect" onchange="select_class();">
-<option value="--">Select Class</option>
+<ul class="selectbox class-list">
+<!--<select name="levelSelect" id="levelSelect" onchange="select_class();">-->
+<li class='disp' style='border-bottom: none;text-align:center'>Select Class</li>
+<ul>
 	<?php
-	print_r ($classes);
+	//print_r ($classes);
 	foreach ($classes as $value) {
 		$class = $value['ClassNumber']; //DB
 		
 	
 	?>
-	<option value="<?=$class?>">Class <?=$class?></option>
+	<li value="<?=$class?>">Class <?=$class?></li>
 
 	<?php 
 		}
 	?>
-</select>
-<script>
-	function select_class(){
-		var url = "/contents/in/"+document.getElementById('levelSelect').value;
-		window.location.href = url;
-	}
-</script>
+</ul>
+</ul>
