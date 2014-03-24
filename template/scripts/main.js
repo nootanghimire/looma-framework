@@ -32,6 +32,12 @@ $(function(){
 		window.location.href = url;
 		$("body").css("cursor","progress");
 	})
+    $(".subject-list ul li").click(function(){
+    var current_selected = $(this).attr('value');
+    var url = "/contents/classes/"+current_selected;
+    window.location.href = url;
+    $("body").css("cursor","progress");
+  })
 	$(document).mouseup(function (e){
 		var container = $(".selectbox");
 		if (!container.is(e.target) && container.has(e.target).length === 0){

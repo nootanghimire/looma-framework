@@ -1,18 +1,15 @@
 You are in <?=$currentclass?> . Select Subjects <br>
-<select name="selSub" id="selSub" onchange="selsub();">
-	<option value="--">Select Subject</option>
+<!-- <select name="selSub" id="selSub" onchange="selsub();">
+	<option value="-">Select Subject</option> -->
+	<ul class="selectbox subject-list">
+	<li class='disp' style='border-bottom: none;text-align:center'>Select Subjects</li>
+	<ul>
 <?php
 	foreach ($subjects as $subject) {
 		# code...
-		echo "<option value=\"".$subject['SubjectID']."\">".$subject['SubjectName']."</option>";
+		echo "<li value=\"".$subject['SubjectID']."\">".$subject['SubjectName']."</li>";
 	}
 	
 ?>
-</select>
-
-<script>
-	function selsub(){
-		url = '/contents/classes/'+document.getElementById('selSub').value;
-		window.location.href = url;
-	}
-</script>
+</ul>
+</ul>
