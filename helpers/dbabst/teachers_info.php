@@ -38,4 +38,24 @@ class teachers_info{
 		}
 		return false;
 	}
+
+	public function saveState($teacherID, $saveType, $StateID){
+		//INSERT INTO 
+		/*$query = "IF EXISTS (SELECT 1 FROM savedsessions WHERE TeacherID= $teacherID) THEN 
+					
+				    	UPDATE savedsessions
+				    	SET SaveType = '$saveType', StateID = '$StateID' 
+				    	WHERE TeacherID = $teacherID;
+				ELSE 
+				    	INSERT INTO savedsessions 
+				    	VALUES (NULL, $teacherID, '$saveType',$StateID);
+					";*/
+		$query = "INSERT INTO savedsessions VALUES (NULL, $teacherID, '$saveType',$StateID)
+  ON DUPLICATE KEY UPDATE SaveType='$saveType', StateID = '$StateID' ;";
+
+		$result = $this->dbObj->query_exec($query);
+		if(!$result){
+			echo mysqli_error($this->dbObj->getConnection()); //error_reporitng
+		}
+	}
 }

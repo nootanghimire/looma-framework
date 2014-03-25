@@ -23,6 +23,8 @@ Class teachers extends baseapp {
 	}
 
 	public function start_teaching($teacherID){
+		//save the teachers id in an cookie
+		setcookie('teachers',$teacherID,0,'/');
 		//check if there is a saved session for the teacher	
 		$ret['file1']['template_file'] = 'start_teaching';
 		if($this->teachersData->hasSaved($teacherID)){
