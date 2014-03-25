@@ -53,19 +53,19 @@ header{
 footer{
 	padding: 10px;
 }
-container{
+#container{
 	position: relative;
 	left: 10px;
 	top:10px;
 }
-container a{
+#container a{
 	padding: 5px 10px;
 	text-decoration: none;
 	color: #666;
 	border: 1px solid #aaa;
 	border-radius: 3px;
 }
-container a:hover{
+#container a:hover{
 	border: 1px solid #666;
 	color: #000;
 }

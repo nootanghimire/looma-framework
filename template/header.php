@@ -11,4 +11,4 @@
 		<a href="/" class="title">Looma</a>
 		<span id="datetime"></span>
 	</header>
-	<container>
+	<div id="container">
