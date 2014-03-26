@@ -1,4 +1,8 @@
 <?php
+/* Use jQurey UI to load all the contents and then sort/filter or whatever. */
+/* Think of a way to input the contents into the looma database. Maybe copy the files, and import the SQL*/
+/* So, that the contents and the uploaded thing will go side by side..*/
+
 class contents extends baseapp{
 	protected $subjects_data;
 
@@ -44,7 +48,6 @@ class contents extends baseapp{
 		$ret['file1']['data']['currentclass']=$classNumber;
 		$ret['file1']['data']['classes']=$this->subjects_data->getClassList();
 		$ret['file1']['data']['subjects'] = $this->subjects_data->getSubjectsForClass($classNumber);
-
 		return $ret;
 	}
 
@@ -74,7 +77,5 @@ class contents extends baseapp{
 		$ret['file1']['data']['file'] = "resources/".$fileInfo['FileName']; //path relative to DocRoot/Resources/
 		//$ret['file2']['template_file'] = 'fragments/view_basic_controls';
 		return $ret;
-	}
-
-	
+	}	
 }
