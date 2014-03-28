@@ -1,1 +1,1 @@
-<center><iframe src="/pdfjs/web/viewer.html?/<?=$file?>" height= "800px" width="90%"></iframe></center>
+<center><iframe src="/pdfjs/web/viewer.html?/<?=$file?>" height= "800px" width="90%" allowfullscreen></iframe></center>

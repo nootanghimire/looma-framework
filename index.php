@@ -32,11 +32,15 @@ spl_autoload_register(function($class){
  * function(which automatically loads the file containing class you are instantiating))
  */
 
+function giveyay(){
+	//echo "Yay!!!!!";
+}
 
 
 /* define some nasty things!*/
 define('ROOT', dirname(__FILE__));  //This just defines the constant ROOT to contain the web root
 
+echo $_SERVER['DOCUMENT_ROOT'];
 
 /* including wierd configs */
 

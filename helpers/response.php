@@ -15,7 +15,7 @@ Class Response{
 	 * function init: It initializes things. See the function
 	 */
 	public function init($className, $methodName="index", $args=null){ 
-		#echo "Response Called: " . $className . " -- Method: ". $methodName . " -- Args: ";
+		echo "Response Called: " . $className . " -- Method: ". $methodName . " -- Args: ";
 		#var_dump($args);
 		$this->classContainer = new $className(); //As i said earlier, $classname is thing1 and that is being instantiated 
 		//call_user_func_array(array($obj, $method_name), $params);
