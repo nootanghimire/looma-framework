@@ -1,6 +1,7 @@
 <?php
 	class apps_info{
-
+		//TODO: The backend of the thing
+		
 		public function __construct(){
 			$this->dbObj = new Database();
 		}	
