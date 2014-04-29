@@ -7,7 +7,14 @@ $(function(){
 			window.location.href = "/"
 			$("body").css("cursor","progress");
 			break;
+
+      case 2:
+      window.location.href="/apps"
+      $("body").css("cursor","progress");
+      break;
 		}
+    /* The funcionality of the click event on the bottom link is above */
+    
 	}) /* The toolbar click behaviour */
 	$(".toolbar button").hover(function(){
 		$(".toolbar .caption").text($(this).find('img').attr('alt'));
