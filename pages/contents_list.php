@@ -42,9 +42,9 @@ echo "contents: <br><br>";*/
 					# code...
 					?>
 						<tr>
-						<th><?=$content['Category']?></th>
-						<th><?=$content['Subcategory']?></th>
-						<th><?=$content['ContentType']?></th>
+						<td><?=$content['Category']?></td>
+						<td><?=$content['Subcategory']?></td>
+						<td><a href="/contents/view/<?=$content['ContentFileID']?>"><?=$content['ContentType']?></a></td>
 						</tr>
 					<?php
 					}
